@@ -1,4 +1,4 @@
-import { useState ,useRef } from 'react';
+import { useState } from 'react';
 import './App.css';
 import FormInput from './components/FormInput';
 
@@ -32,16 +32,14 @@ function App() {
       pattern:"^[a-z0-9]+(?!.*(?:\+{2,}|\-{2,}|\.{2,}))(?:[\.+\-]{0,1}[a-z0-9])*@gmail\.com$",
       errorMessage: "It should be a valid email address!",
       required: true
-      },
-      {
+      },{
       id:3,
       name: "birthday",
       type:"date",
       placeholder:"Birthday",
       label:"Birthday",
       required: true
-      },
-      {
+      },{
         id:4,
         name: "password",
         type:"password",
@@ -65,10 +63,7 @@ function App() {
     ]
   const handleSubmit = (e) => {
     e.preventDefault();
-    
-
   }
-
   const onChange = (e) =>{
     setValues({...values , [e.target.name]:e.target.value})
 
